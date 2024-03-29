@@ -1,0 +1,40 @@
+<template>
+    <div class=" flex-auto justify-center items-center h-7 ">
+        <n-card :title="project.name" size="medium" class=" max-w-xs ">
+            <template #cover>
+                <img src="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg">
+            </template>
+            <template #header-extra>
+            #header-extra
+            </template>
+            卡片内容
+            <template #footer>
+                #footer
+            </template>
+            <template #action>
+                <n-button strong secondary round type="primary" @click="visit">
+                    访问
+                </n-button>
+            </template>
+        </n-card>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { reactive } from 'vue';
+
+const project = reactive({
+    name: 'Blog',
+    description: 'This is a project template',
+    url: 'https://blog.bangwu.top',
+    cover: 'https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg'
+
+});
+const visit = () => {
+    window.open(project.url);
+}
+</script>
+
+<style scoped>
+
+</style>

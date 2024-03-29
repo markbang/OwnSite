@@ -1,14 +1,16 @@
 <template>
-  <div className="flex items-center">
-    <n-button type="primary">naive-ui</n-button>
-    <h1 className="text-3xl font-bold underline text-red-600">
-        Hello world!
-    </h1>
-  </div>
+    <div class=" justify-center items-center flex">
+        <ProjectTemp />
+        <StepStudy />
+    </div>
+    <div>
+        
+    </div>
 </template>
 
 <script setup lang="ts">
-  import { NButton } from 'naive-ui'
+import ProjectTemp from './components/ProjectTemp.vue'
+import StepStudy from './components/StepStudy.vue'
 </script>
 
 <style scoped>
