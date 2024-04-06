@@ -10,8 +10,6 @@ declare module 'vue' {
     NButton: typeof import('naive-ui')['NButton']
     NButtonGroup: typeof import('naive-ui')['NButtonGroup']
     NCard: typeof import('naive-ui')['NCard']
-    NDynamicInput: typeof import('naive-ui')['NDynamicInput']
-    NGradientText: typeof import('naive-ui')['NGradientText']
     NIcon: typeof import('naive-ui')['NIcon']
     NRadioButton: typeof import('naive-ui')['NRadioButton']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
