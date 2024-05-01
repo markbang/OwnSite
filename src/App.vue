@@ -1,16 +1,11 @@
 <template>
-    <div class=" justify-center items-center flex">
-        <ProjectTemp />
-        <StepStudy />
-    </div>
-    <div>
-        
+    <div class="flex items-center justify-center ">
+        <RssMe />
     </div>
 </template>
 
 <script setup lang="ts">
-import ProjectTemp from './components/ProjectTemp.vue'
-import StepStudy from './components/StepStudy.vue'
+import RssMe from './pages/RssMe.vue';
 </script>
 
 <style scoped>
