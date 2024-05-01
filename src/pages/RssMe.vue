@@ -6,9 +6,9 @@
           <p class="text-gray-600">Loading...</p>
         </div>
         <div v-else>
-          <div v-for="item in items" :key="item.title" class="mb-4">
-            <h2 class="mb-2 text-xl font-semibold">{{ renderTitle(item.title) }}</h2>
-            <div v-html="renderHtml(replaceCdnUrl(item.description))" class="text-gray-700"></div>
+            <div v-for="item in items as any[]" :key="item.title" class="mb-4">
+            <h2 class="mb-2 text-xl font-semibold">{{ renderTitle((item as any).title) }}</h2>
+            <div v-html="renderHtml(replaceCdnUrl((item as any).description))" class="text-gray-700"></div>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
       const res = await fetch(rss_url)
       const data = await res.text()
       const json = x2js.xml2js(data)
-      items.value = Array.isArray(json.rss.channel.item) ? json.rss.channel.item : [json.rss.channel.item]
+      items.value = Array.isArray((json as any).rss.channel.item) ? (json as any).rss.channel.item : [(json as any).rss.channel.item]
       loading.value = false
     } catch (error) {
       console.error('Error fetching data:', error)
