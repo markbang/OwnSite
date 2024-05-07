@@ -8,7 +8,8 @@
         <div v-else>
             <div v-for="item in items as any[]" :key="item.title" class="mb-4">
             <h2 class="mb-2 text-xl font-semibold">{{ renderTitle((item as any).title) }}</h2>
-            <div v-html="renderHtml(replaceCdnUrl((item as any).description))" class="text-gray-700"></div>
+            <div v-html="renderHtml(replaceCdnUrl((item as any).description))" class="text-gray-700 border-2"></div>
+            <hr>
           </div>
         </div>
       </div>
@@ -19,7 +20,7 @@
   import { ref, onMounted } from 'vue'
   import X2js from 'x2js'
   
-  const rss_url = 'https://corsproxy.io/?https%3A%2F%2Frsshub.bangwu.top%2Ftelegram%2Fchannel%2Fmarkbangchannel'
+  const rss_url = 'https://rsshub.bangwu.top/telegram/channel/markbangchannel'
   let x2js = new X2js()
   
   const loading = ref(true)
